@@ -1,5 +1,7 @@
+
 flask>=3.0
+gunicorn>=22.0
 pillow>=10.0
 numpy>=1.24
-tensorflow>=2.15      # Python 3.9-3.12 (training + inference)
-scikit-learn>=1.3     # only for evaluation metrics in model/train.py
+tensorflow>=2.15
+scikit-learn>=1.3
