@@ -59,12 +59,18 @@ Open http://127.0.0.1:5000
 | GET | `/api/history`, DELETE `/api/history` | prediction history |
 | GET | `/api/stats` | per-class counts |
 | GET | `/api/model-metrics` | real metrics from training |
+## Model Performance and Evaluation
+
+The model was evaluated using a separate test dataset. The evaluation metrics, including accuracy, precision, recall, and F1-score, are available in `model/metrics.json`.
+
+## Dataset and Disease Information
+
+The project uses the PlantVillage tomato leaf dataset for training and evaluation. Disease descriptions and reference images are available in the `disease_info/` and `frontend/img/diseases/` directories.
 
 ## Troubleshooting
-- "Model not trained yet": run step 2.
-- TensorFlow install fails: use Python 3.10–3.12 (64-bit).
-- Low confidence on phone photos: PlantVillage images are lab-style (single leaf, plain background); use similar photos.
 
-## For your viva
-Cite your own measured numbers from `model/metrics.json` only. Add photos of each disease to `frontend/img/diseases/`
-(check dataset licensing/credit).
+- **Model not found:** Verify that the trained model file exists in the `model/` directory.
+- **TensorFlow installation issues:** Use a compatible 64-bit Python version (3.10–3.12).
+- **Low prediction confidence:** Use clear images of individual tomato leaves with good lighting for better predictions.
+
+
