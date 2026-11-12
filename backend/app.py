@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from flask import Flask, jsonify, request, send_from_directory
 from PIL import Image, UnidentifiedImageError
-from predictor import Predictor, ModelNotAvailable
+from .predictor import Predictor, ModelNotAvailable
 
 ROOT = Path(__file__).resolve().parent.parent
 UPLOADS, FRONTEND = ROOT / "uploads", ROOT / "frontend"
