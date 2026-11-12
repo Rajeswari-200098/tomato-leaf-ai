@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Detect Disease · TomatoLeaf AI</title><link rel="stylesheet" href="/css/style.css"><script src="/js/main.js"></script></head><body><div id="nav"></div>
+<div class="page-head"><div class="container"><h1>Disease Detection</h1><p>Upload a clear, well-lit photo of a single tomato leaf.</p></div></div>
+<section><div class="container" style="max-width:900px"><div id="error"></div>
+<div id="upload-view"><div class="drop" id="drop"><div class="icon">☁️</div><h3>Drag &amp; drop a leaf image here</h3><p>or click to browse · JPG, PNG, WEBP · max 5 MB</p></div><input type="file" id="file" accept="image/jpeg,image/png,image/webp" hidden></div>
+<div id="preview-view" class="hidden center"><img id="preview" alt="Preview"><p style="margin-top:18px"><button class="btn" id="analyze" disabled>Analyze Image</button> <button class="btn ghost" id="reset">Choose another</button></p></div>
+<div id="loading" class="hidden center"><div class="spinner"></div><p>Analyzing leaf…</p></div>
+<div id="result" class="hidden" style="margin-top:28px"></div><span id="again" hidden></span></div></section>
+<script src="/js/detect.js"></script>
+<div id="footer"></div></body></html>

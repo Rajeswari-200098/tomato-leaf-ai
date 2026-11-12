@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How It Works · TomatoLeaf AI</title><link rel="stylesheet" href="/css/style.css"><script src="/js/main.js"></script></head><body><div id="nav"></div>
+<div class="page-head"><div class="container"><h1>How It Works</h1><p>The complete workflow from image to diagnosis.</p></div></div>
+<section><div class="container"><div class="steps" style="margin-bottom:40px">
+<div class="step">🍃<br>Tomato leaf image</div><div class="step">🔧<br>Preprocessing</div><div class="step">🔁<br>Data augmentation (training only)</div><div class="step">🧠<br>CNN / transfer learning</div><div class="step">🔍<br>Feature extraction</div><div class="step">🏷️<br>Classification</div><div class="step">📊<br>Confidence score</div><div class="step">📘<br>Disease information</div></div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+<div class="card"><h3>Preprocessing</h3><p>The image is converted to RGB and resized to 224×224. Pixel values are scaled to [-1, 1], exactly as MobileNetV2 expects. This scaling is part of the saved model, so training and prediction always match.</p></div>
+<div class="card"><h3>Data augmentation</h3><p>During training only: random flips, rotation, zoom and contrast changes make the model robust to different photo conditions. It is not applied at prediction time.</p></div>
+<div class="card"><h3>CNN with transfer learning</h3><p>MobileNetV2 pretrained on ImageNet is used as a feature extractor. Its convolutional layers detect edges, textures and lesion patterns, then pooled features feed a dropout layer and a 10-way softmax classifier. The top backbone layers are fine-tuned.</p></div>
+<div class="card"><h3>Classification &amp; confidence</h3><p>Softmax outputs a probability per class. The highest is the prediction and its probability is the confidence. Low-confidence results are flagged.</p></div></div>
+<div id="metrics" style="margin-top:30px"></div></div></section>
+<script src="/js/pages.js"></script>
+<div id="footer"></div></body></html>

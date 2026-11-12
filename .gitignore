@@ -1,0 +1,15 @@
+﻿dataset/
+uploads/*
+!uploads/.gitkeep
+
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+.git/
+.DS_Store
+Thumbs.db
+*.log
+history.db
